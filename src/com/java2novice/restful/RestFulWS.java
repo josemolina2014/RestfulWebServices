@@ -43,7 +43,7 @@ public class RestFulWS
 	  }
 	 
 	@POST
-    @Path("/order2")
+    @Path("/orderList")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getUsersById(List<Order> inputOrderList)
 	{   		
