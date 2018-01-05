@@ -42,20 +42,19 @@ public class RestFulWS
 	    return outputJsonObj;
 	  }
 	 
-	 @POST
-	    @Path("/order2")
-	    @Consumes(MediaType.APPLICATION_JSON)
-	    public Response getUsersById(List<Order> inputOrderList){
-	         
-		 
-		 for (Order inputOrder : inputOrderList) {
-			
+	@POST
+    @Path("/order2")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getUsersById(List<Order> inputOrderList)
+	{   		
+		 for (Order inputOrder : inputOrderList) 
+		 {		
 		
 	        System.out.println("Received order from :"+inputOrder.getCustmer());
 	        System.out.println("Order worth: "+inputOrder.getAmount());
 	        System.out.println("Customer address: "+inputOrder.getAddress());
 		 }
 	        return Response.status(200).entity("Your order is in-progress").build();
-	    }
+	}
 
 }
