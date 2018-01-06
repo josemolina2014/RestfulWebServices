@@ -25,8 +25,12 @@ public class RestFulWS
 	        System.out.println("Received order from :"+inputOrder.getCustmer());
 	        System.out.println("Order worth: "+inputOrder.getAmount());
 	        System.out.println("Customer address: "+inputOrder.getAddress());
+	        System.out.println("Creation Date "+inputOrder.getCreationDate());
+	        
+	        System.out.println("*************************************************************");
+	        System.out.println("*************************************************************");
 	         
-	        return Response.status(200).entity("Your order is in-progress").build();
+	        return Response.status(200).entity("Your order is in-progres\t"+inputOrder.getCreationDate()).build();
 	    }
 	 
 	 @POST
@@ -53,8 +57,9 @@ public class RestFulWS
 	        System.out.println("Received order from :"+inputOrder.getCustmer());
 	        System.out.println("Order worth: "+inputOrder.getAmount());
 	        System.out.println("Customer address: "+inputOrder.getAddress());
+	        
 		 }
-	        return Response.status(200).entity("Your order is in-progress").build();
+	        return Response.status(200).entity("Your order is in-progress ").build();
 	}
 
 }
